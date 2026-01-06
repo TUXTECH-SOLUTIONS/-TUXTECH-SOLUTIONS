@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuxTech Solutions | Under Construction 2026</title>
+    <style>
+        :root {
+            --neon-green: #00ff41;
+            --warning-orange: #ffb000;
+            --dark-bg: #0a0a0a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --crt-scanline: rgba(18, 16, 16, 0.15);
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Эффект старого монитора */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, var(--crt-scanline) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+            z-index: 1000;
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* Бегущая строка статуса */
+        .status-bar {
+            background: var(--warning-orange);
+            color: black;
+            font-weight: bold;
+            padding: 5px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1100;
+            box-shadow: 0 0 15px var(--warning-orange);
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #151515 0%, #000 100%);
+            border-bottom: 2px solid var(--warning-orange);
+        }
+
+        .logo-box {
+            padding: 40px;
+            border: 1px solid var(--neon-green);
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+            text-align: center;
+            clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            color: var(--neon-green);
+            text-shadow: 0 0 15px var(--neon-green);
+        }
+
+        .dev-badge {
+            display: inline-block;
+            background: var(--warning-orange);
+            color: black;
+            padding: 2px 10px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            transform: rotate(-2deg);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid #333;
+            padding: 25px;
+            position: relative;
+            opacity: 0.8;
+        }
+
+        .card::after {
+            content: "INITIALIZING...";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.6rem;
+            color: var(--warning-orange);
+        }
+
+        .status-tag {
+            color: var(--warning-orange);
+            font-size: 0.75rem;
+            border: 1px solid var(--warning-orange);
+            padding: 2px 5px;
+            text-transform: uppercase;
+        }
+
+        /* Индикатор загрузки */
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: #222;
+            margin-top: 15px;
+        }
+        .progress-fill {
+            width: 35%;
+            height: 100%;
+            background: var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            border: 1px solid var(--warning-orange);
+            color: var(--warning-orange);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--warning-orange);
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            color: #555;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        marquee {
+            width: 100%;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="status-bar">
+    <marquee scrollamount="10">WARNING: ALL SYSTEMS ARE UNDER ACTIVE DEVELOPMENT // BUILD v0.0.1-ALPHA // TUXTECH SOLUTIONS 2026 // OPEN SOURCE SOON</marquee>
+</div>
+
+<header>
+    <div class="dev-badge">PROJECT: STARTUP</div>
+    <div class="logo-box">
+        <h1>TUXTECH</h1>
+        <div style="letter-spacing: 8px; color: #888;">SOLUTIONS</div>
+    </div>
+    <p style="margin-top: 40px; color: var(--warning-orange);">[ ОЖИДАНИЕ КОМПИЛЯЦИИ ПЕРВЫХ РЕЛИЗОВ... ]</p>
+    <div style="width: 200px" class="progress-container">
+        <div class="progress-fill"></div>
+    </div>
+</header>
+
+<div class="container">
+    <h2 style="color: var(--neon-green);">> ЛАБОРАТОРИЯ РАЗРАБОТКИ</h2>
+    <div class="grid">
+        <!-- App 1 -->
+        <div class="card">
+            <h3>TuxTune v0.1</h3>
+            <span class="status-tag">В разработке (35%)</span>
+            <p>Оптимизатор ядра Linux. Пишется на Rust для максимальной производительности.</p>
+            <div class="progress-container"><div class="progress-fill" style="width: 35%"></div></div>
+        </div>
+        <!-- App 2 -->
+        <div class="card">
+            <h3>PrivacyShell</h3>
+            <span class="status-tag">Проектирование (10%)</span>
+            <p>Ваша приватность — наш приоритет. Блокировка телеметрии на уровне железа.</p>
+            <div class="progress-container"><div class="progress-fill" style="width: 10%"></div></div>
+        </div>
+        <!-- App 3 -->
+        <div class="card">
+            <h3>TuxUtilities</h3>
+            <span class="status-tag">Сборка идей</span>
+            <p>Набор мелких утилит для повседневной работы в терминале.</p>
+            <div class="progress-container"><div class="progress-fill" style="width: 5%"></div></div>
+        </div>
+    </div>
+
+    <div style="margin-top: 80px; text-align: center; border: 1px solid #222; padding: 50px; background: rgba(255, 176, 0, 0.02);">
+        <h2 style="color: var(--warning-orange);">МЫ ГОТОВИМ ЧТО-ТО БОЛЬШОЕ</h2>
+        <p>TuxTech Solutions — это новая волна софта для сообщества. Мы не спешим, мы делаем качественно.</p>
+        <p style="font-size: 0.8rem; color: #666;">Запуск первых публичных репозиториев намечен на весну 2026.</p>
+        <a href="#" class="btn">Следить за разработкой</a>
+    </div>
+</div>
+
+<footer>
+    SYSTEM STATUS: <span style="color: var(--neon-green);">ONLINE</span> <br>
+    &copy; 2026 TUXTECH SOLUTIONS | КИБЕР-ЛАБОРАТОРИЯ LINUX
+</footer>
+
+</body>
+</html>
