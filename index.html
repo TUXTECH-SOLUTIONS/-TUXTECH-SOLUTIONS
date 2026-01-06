@@ -114,6 +114,8 @@
             position: relative;
             backdrop-filter: blur(5px);
             transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -144,8 +146,10 @@
         }
 
         .btn-github {
+            margin-top: auto;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             background: transparent;
             color: var(--neon-green);
@@ -209,6 +213,7 @@
 
     <div class="project-grid">
       
+        <!-- TuxState -->
         <div class="card">
             <div class="status-badge">ONLINE</div>
             <h3>TuxState</h3>
@@ -219,7 +224,7 @@
             </a>
         </div>
 
-       
+       <!-- TuxCleaner -->
         <div class="card">
             <div class="status-badge">ONLINE</div>
             <h3>TuxCleaner</h3>
@@ -230,12 +235,23 @@
             </a>
         </div>
 
-       
+       <!-- TuxGuard -->
         <div class="card">
             <div class="status-badge">ONLINE</div>
             <h3>TuxGuard</h3>
             <p>Сетевой аудит и безопасность. Контроль открытых портов и процессов, слушающих сеть.</p>
             <div class="tech-tags">#Python #Security #Network #GTK4</div>
+            <a href="github.com" target="_blank" class="btn-github">
+                <span>[ GITHUB_REPOSITORY ]</span>
+            </a>
+        </div>
+
+        <!-- TuxTask -->
+        <div class="card">
+            <div class="status-badge">ONLINE</div>
+            <h3>TuxTask</h3>
+            <p>Продвинутый диспетчер задач. Мониторинг процессов и возможность управления их состоянием.</p>
+            <div class="tech-tags">#Python #Process-Manager #System #GTK4</div>
             <a href="github.com" target="_blank" class="btn-github">
                 <span>[ GITHUB_REPOSITORY ]</span>
             </a>
