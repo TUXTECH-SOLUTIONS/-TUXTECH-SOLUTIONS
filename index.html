@@ -23,7 +23,6 @@
             overflow-x: hidden;
         }
 
-
         body::before {
             content: " ";
             display: block;
@@ -35,7 +34,6 @@
             background-size: 100% 4px, 3px 100%;
             pointer-events: none;
         }
-
 
         nav {
             width: 250px;
@@ -103,7 +101,6 @@
             color: var(--neon-green);
         }
 
-
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -146,7 +143,6 @@
             color: #666;
         }
 
-   
         .btn-github {
             display: inline-flex;
             align-items: center;
@@ -235,11 +231,14 @@
         </div>
 
        
-        <div class="card" style="border-style: dashed; opacity: 0.4;">
-            <h3>Project_Gamma</h3>
-            <p>Проектирование новой системной утилиты. Инициализация кода намечена на конец января.</p>
-            <div class="tech-tags">#R&D #Linux_Apps</div>
-            <div style="color: var(--warning-orange); font-size: 0.8rem;">[ UNDER_CONSTRUCTION ]</div>
+        <div class="card">
+            <div class="status-badge">ONLINE</div>
+            <h3>TuxGuard</h3>
+            <p>Сетевой аудит и безопасность. Контроль открытых портов и процессов, слушающих сеть.</p>
+            <div class="tech-tags">#Python #Security #Network #GTK4</div>
+            <a href="github.com" target="_blank" class="btn-github">
+                <span>[ GITHUB_REPOSITORY ]</span>
+            </a>
         </div>
     </div>
 
