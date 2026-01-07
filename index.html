@@ -121,6 +121,7 @@
         .card:hover {
             border-color: var(--neon-green);
             transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
         }
 
         .card h3 {
@@ -192,7 +193,7 @@
     
     <div style="margin-top: auto; color: #444; font-size: 0.7rem;">
         STATUS: ONLINE<br>
-        2026.01.06
+        2026.01.07
     </div>
 </nav>
 
@@ -212,12 +213,23 @@
     </div>
 
     <div class="project-grid">
+
+        <!-- TuxVizor (NEW!) -->
+        <div class="card" style="border-color: var(--neon-green);">
+            <div class="status-badge" style="background: var(--neon-green); color: black;">CORE_PROJECT</div>
+            <h3>TuxVizor</h3>
+            <p>Гипервизор на базе QEMU/KVM. Позволяет запускать и тестировать любые ОС с аппаратным ускорением и гибкой настройкой ресурсов.</p>
+            <div class="tech-tags">#Python #QEMU #KVM #GTK4 #Virtualization</div>
+            <a href="https://github.com/TUXTECH-SOLUTIONS/TuxVizor" target="_blank" class="btn-github">
+                <span>[ GITHUB_REPOSITORY ]</span>
+            </a>
+        </div>
       
         <!-- TuxState -->
         <div class="card">
             <div class="status-badge">ONLINE</div>
             <h3>TuxState</h3>
-            <p>Системный монитор реального времени. Сбор метрик процессора, памяти и сетевой активности.</p>
+            <p>Системный монитор реального времени. Сбор метрик процессора, памяти и сетевой активности в ретро-стиле.</p>
             <div class="tech-tags">#Python #GTK4 #Libadwaita #Psutil</div>
             <a href="https://github.com/TUXTECH-SOLUTIONS/TuxState" target="_blank" class="btn-github">
                 <span>[ GITHUB_REPOSITORY ]</span>
@@ -228,7 +240,7 @@
         <div class="card">
             <div class="status-badge">ONLINE</div>
             <h3>TuxCleaner</h3>
-            <p>Утилита для очистки кэша и временных файлов. Безопасная оптимизация пространства.</p>
+            <p>Утилита для очистки кэша и временных файлов. Безопасная оптимизация пространства в один клик.</p>
             <div class="tech-tags">#Python #GTK4 #OS-Management #Cleaners</div>
             <a href="https://github.com/TUXTECH-SOLUTIONS/TuxClear" target="_blank" class="btn-github">
                 <span>[ GITHUB_REPOSITORY ]</span>
@@ -239,9 +251,9 @@
         <div class="card">
             <div class="status-badge">ONLINE</div>
             <h3>TuxGuard</h3>
-            <p>Сетевой аудит и безопасность. Контроль открытых портов и процессов, слушающих сеть.</p>
+            <p>Сетевой аудит и безопасность. Контроль открытых портов и процессов, слушающих сеть в реальном времени.</p>
             <div class="tech-tags">#Python #Security #Network #GTK4</div>
-            <a href="github.com" target="_blank" class="btn-github">
+            <a href="https://github.com/TUXTECH-SOLUTIONS/TuxGuard" target="_blank" class="btn-github">
                 <span>[ GITHUB_REPOSITORY ]</span>
             </a>
         </div>
@@ -250,16 +262,17 @@
         <div class="card">
             <div class="status-badge">ONLINE</div>
             <h3>TuxTask</h3>
-            <p>Продвинутый диспетчер задач. Мониторинг процессов и возможность управления их состоянием.</p>
+            <p>Продвинутый диспетчер задач. Мониторинг процессов и возможность управления их состоянием (Kill, Pause, Resume).</p>
             <div class="tech-tags">#Python #Process-Manager #System #GTK4</div>
-            <a href="github.com" target="_blank" class="btn-github">
+            <a href="https://github.com/TUXTECH-SOLUTIONS/TuxTask" target="_blank" class="btn-github">
                 <span>[ GITHUB_REPOSITORY ]</span>
             </a>
         </div>
     </div>
 
     <div class="footer-line">
-        &copy; 2026 TUXTECH SOLUTIONS. ВСЕ РЕПОЗИТОРИИ ЗАЩИЩЕНЫ MIT LICENSE.
+        &copy; 2026 TUXTECH SOLUTIONS. ENGINEERING FREEDOM. <br>
+        ALL REPOSITORIES ARE LICENSED UNDER MIT.
     </div>
 </main>
 
